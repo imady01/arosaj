@@ -1,0 +1,183 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-img routerLink="/home" src="assets/icon/logo-aro.png"> </ion-img>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button class="bottom-section" routerLink="/home">accueil</ion-button>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="background-pic">
+    <div class="background-filter">
+      <div *ngIf="errorMessage" class="error-message">{{errorMessage}}</div>
+  <form #compteForm="ngForm" (ngSubmit)="onSubmit(compteForm)">
+
+  
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+    Inscription!
+          </ion-card-title>
+          <ion-card-subtitle>
+          Créer votre <strong>compte</strong>
+          </ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list class="background-filter">
+          <ion-item>
+            <ion-label for="mail"></ion-label>
+            <ion-input type="email" placeholder="Adresse e-mail" name="mail" id="mail" [(ngModel)]="compte.mail" required></ion-input>
+          </ion-item>
+      
+           <ion-item>
+             <ion-label for="nomUtilisateur"> </ion-label>
+            <ion-input type="text" placeholder="Nom d'utilisateur" name="nomUtilisateur" id="nomUtilisateur" [(ngModel)]="compte.nomUtilisateur" required></ion-input>
+           </ion-item>
+      
+           <ion-item>
+             <ion-label for="motdepasse"> </ion-label>
+            <ion-input type="password" placeholder="Mot de passe" name="motdepasse" id="motdepasse" [(ngModel)]="compte.motDePasse" required></ion-input>
+           </ion-item>
+      
+           <ion-item>
+             <ion-label for="nom"> </ion-label>
+            <ion-input type="text"  placeholder="Nom" name="nom" id="nom" [(ngModel)]="client.nom" required></ion-input>
+           </ion-item>
+           <ion-item>
+             <ion-label for="prenom"> </ion-label>
+            <ion-input type="text" placeholder="Prénom" name="prenom" id="prenom" [(ngModel)]="client.prenom" required></ion-input>
+           </ion-item>
+      
+           <ion-item>
+             <ion-label for="adresse"> </ion-label>
+            <ion-input type="text" placeholder="Adresse" name="adresse" id="adresse" [(ngModel)]="client.adresse" required></ion-input>
+           </ion-item>
+           
+           <ion-item>
+            <ion-label for="ville"> </ion-label>
+           <ion-input type="text" placeholder="Ville" name="ville" id="ville" [(ngModel)]="client.ville" required></ion-input>
+          </ion-item>
+    
+          <ion-item>
+            <ion-label for="codePostal"> </ion-label>
+           <ion-input type="number" placeholder="Code Postal" name="codePostal" id="codePostal" [(ngModel)]="client.codePostal" required></ion-input>
+          </ion-item>
+    
+      
+           <ion-item>
+             <ion-label for="dateDeNaissance"> </ion-label>
+            <ion-input type="date"  placeholder="Date de naissance" name="dateDeNaissance" id="dateDeNaissance" [(ngModel)]="client.dateDeNaissance" required></ion-input>
+           </ion-item>
+      
+           <ion-item>
+             <ion-label for="telephone"> </ion-label>
+            <ion-input type="tel" placeholder="Téléphone" name="telephone" id="telephone" [(ngModel)]="client.telephone" required></ion-input>
+           </ion-item>
+          </ion-list>
+          <div class="bottom-section">
+            <ion-button type="submit">Inscription</ion-button>
+            <span> Avez-vous un compte <a routerLink="/connexion">Connexion</a></span>
+          </div>
+
+        </ion-card-content>
+      </ion-card>
+   
+</form>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <form #compteForm="ngForm" (ngSubmit)="onSubmit(compteForm)">
+
+    <ion-list>
+      <ion-item>
+        <ion-label for="mail"></ion-label>
+        <ion-input type="email" placeholder="Adresse e-mail" name="mail" id="mail" [(ngModel)]="compte.mail" required></ion-input>
+      </ion-item>
+  
+       <ion-item>
+         <ion-label for="nomUtilisateur"> </ion-label>
+        <ion-input type="text" placeholder="Nom d'utilisateur" name="nomUtilisateur" id="nomUtilisateur" [(ngModel)]="compte.nomUtilisateur" required></ion-input>
+       </ion-item>
+  
+       <ion-item>
+         <ion-label for="motdepasse"> </ion-label>
+        <ion-input type="password" placeholder="Mot de passe" name="motdepasse" id="motdepasse" [(ngModel)]="compte.motDePasse" required></ion-input>
+       </ion-item>
+  
+       <ion-item>
+         <ion-label for="nom"> </ion-label>
+        <ion-input type="text"  placeholder="Nom" name="nom" id="nom" [(ngModel)]="client.nom" required></ion-input>
+       </ion-item>
+       <ion-item>
+         <ion-label for="prenom"> </ion-label>
+        <ion-input type="text" placeholder="Prénom" name="prenom" id="prenom" [(ngModel)]="client.prenom" required></ion-input>
+       </ion-item>
+  
+       <ion-item>
+         <ion-label for="adresse"> </ion-label>
+        <ion-input type="text" placeholder="Adresse" name="adresse" id="adresse" [(ngModel)]="client.adresse" required></ion-input>
+       </ion-item>
+       
+       <ion-item>
+        <ion-label for="ville"> </ion-label>
+       <ion-input type="text" placeholder="Ville" name="ville" id="ville" [(ngModel)]="client.ville" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label for="codePostal"> </ion-label>
+       <ion-input type="text" placeholder="Code Postal" name="codePostal" id="codePostal" [(ngModel)]="client.codePostal" required></ion-input>
+      </ion-item>
+
+  
+       <ion-item>
+         <ion-label for="dateDeNaissance"> </ion-label>
+        <ion-input type="date"  placeholder="Date de naissance" name="dateDeNaissance" id="dateDeNaissance" [(ngModel)]="client.dateDeNaissance" required></ion-input>
+       </ion-item>
+  
+       <ion-item>
+         <ion-label for="telephone"> </ion-label>
+        <ion-input type="tel" placeholder="Téléphone" name="telephone" id="telephone" [(ngModel)]="client.telephone" required></ion-input>
+       </ion-item>
+    </ion-list>
+    
+
+    <ion-button expand="block" color="primary">Créer un compte</ion-button>
+  </form>
+
+  <ion-row>
+    <ion-col>
+      <ion-button routerLink="/connexion" fill="clear">Déjà un compte ?</ion-button>
+    </ion-col>
+  </ion-row> -->
+</ion-content>

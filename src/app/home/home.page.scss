@@ -1,0 +1,62 @@
+
+ion-img {
+  width: 100px;
+  height: 50px;
+}
+.arbres{
+  width: 200px;
+  height: 200px;
+}
+
+
+
+
+.background-pic{
+  height: 100vh;
+  width: 100%;
+
+  background-position: 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background-filter{
+  height: 100%;
+  width: 100%;
+  background: rgba(255,255,255,0.8);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+ion-toolbar{
+  --ion-background-color: #4d3571;
+  // #ccd3ce
+}
+
+
+
+
+
+ion-content {
+  --background: #fff url("/assets/icon/plantes.png") no-repeat center center / cover;
+  background: rgba(255,255,255,0.8);
+}
+
+
+
+.background-filter{
+  
+    background: rgba(255,255,255,0.8);
+    
+}
+
+
+.bottom-section{
+  --background:#198645;
+      font-weight: 400;
+    --border-radius: 15px !important;
+      color:#fff;
+      background: transparent;
+}
+
